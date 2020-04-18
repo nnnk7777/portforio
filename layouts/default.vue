@@ -24,6 +24,7 @@
             :class="{ 'is-active': isOpen }"
             type="button"
             style="z-index: 30"
+            name="hamburgerMenu"
           >
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
@@ -53,22 +54,22 @@
 
     <!-- footer -->
     <footer
-      class="block w-screen h-32 relative bottom-0 bg-gray-600 text-white flex justify-center items-center"
+      class="block w-screen h-32 relative bottom-0 bg-gray-700 text-white flex justify-center items-center"
     >
       <div class="flex flex-col">
         <!-- sns icons -->
         <div class="flex justify-center">
           <div class="w-32 flex justify-around text-2xl">
-            <a href="https://twitter.com/nnnk7777" target="_blank">
+            <a href="https://twitter.com/nnnk7777" target="_blank" name="twitter" rel="noopener">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://github.com/nnnk7777" target="_blank">
+            <a href="https://github.com/nnnk7777" target="_blank" name="github" rel="noopener">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.instagram.com/nnnk7777/" target="_blank">
+            <a href="https://www.instagram.com/nnnk7777/" target="_blank" name="instagram" rel="noopener">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/nnnk7777" target="_blank">
+            <a href="https://www.facebook.com/nnnk7777" target="_blank" name="facebook" rel="noopener">
               <i class="fab fa-facebook-square"></i>
             </a>
           </div>

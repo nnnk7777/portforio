@@ -45,6 +45,7 @@
               <a
                 href="https://twitter.com/nnnk7777"
                 target="_blank"
+                rel="noopener"
                 class="hover:text-blue-400"
               >
                 nnnk7777

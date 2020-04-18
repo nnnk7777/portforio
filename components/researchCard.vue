@@ -24,7 +24,7 @@
     </div>
     <!-- read more -->
     <div class="w-full flex justify-end pr-5 pb-5">
-      <a :href="link" target="_blank">
+      <a :href="link" target="_blank" rel="noopener">
         <span
           class="inline-block bg-gray-200 rounded-md px-3 py-1 text-sm font-semibold text-gray-700"
         >
