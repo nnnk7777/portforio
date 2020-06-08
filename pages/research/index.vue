@@ -18,7 +18,7 @@
           :thumbnail=reseach.thumbnail
         />
         <div
-          v-for="n in this.num"
+          v-for="n in this.researches"
           class="m-8"
           style="width: 320px; height: 0px;"
         >

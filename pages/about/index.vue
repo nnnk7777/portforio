@@ -16,7 +16,7 @@
         <div class="h-auto m-3 sm:w-1/2">
           <div class="flex flex-col sm:sticky sm:top-10">
 
-            <div class="flex justify-center mx-auto">
+            <div class="flex justify-center mx-auto rounded overflow-hidden shadow-lg">
                 <img
                   src="../../assets/profileimage.jpg"
                   alt="profile image"
