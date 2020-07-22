@@ -1,6 +1,6 @@
 <template lang="html">
   <!-- card -->
-  <div class="max-w-xs rounded-md overflow-hidden shadow-lg my-5 sm:m-8">
+  <div class="max-w-xs rounded-md overflow-hidden shadow-lg my-5">
     <!-- research thumbnail -->
     <div class="w-full h-56 bg-indigo-600">
       <img

@@ -8,22 +8,23 @@
         </h1>
       </div>
       <!-- cards -->
-      <div class="flex justify-center flex-wrap mt-8" ref="cards">
-        <!-- card -->
-        <researchCard
-          v-for="reseach in research_arr"
-          :title=reseach.title
-          :description=reseach.description
-          :link=reseach.link
-          :thumbnail=reseach.thumbnail
-        />
-        <div
-          v-for="n in this.researches"
-          class="m-8"
-          style="width: 320px; height: 0px;"
-        >
-          <!-- empty -->
-        </div>
+      <div class="flex justify-center flex-wrap w-3/4 mx-auto" ref="cards">
+          <!-- card -->
+          <researchCard
+            v-for="reseach in research_arr"
+            :title=reseach.title
+            :description=reseach.description
+            :link=reseach.link
+            :thumbnail=reseach.thumbnail
+            class="m-8"
+          />
+          <div
+            v-for="n in this.researches"
+            class="m-8"
+            style="width: 320px; height: 0px;"
+          >
+            <!-- empty -->
+          </div>
       </div>
     </div>
   </div>
