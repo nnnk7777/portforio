@@ -1,0 +1,14 @@
+{
+    "editor.formatOnSave": true,
+    "path-autocomplete.pathMappings": {
+      "~": "${folder}"
+    },
+    "vetur.format.defaultFormatterOptions": {
+      "prettyhtml": {
+          "printWidth": 100,
+          "singleQuote": false,
+          "wrapAttributes": false,
+          "sortAttributes": false
+      }
+  },
+  }

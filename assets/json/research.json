@@ -1,0 +1,34 @@
+[
+    {
+        "title": "音楽印象と同期した歌詞フォント融合による印象強調手法",
+        "description": "音楽の特徴に合わせて作成したフォントで音楽動画の印象の一部を強調できることを明らかにしました．",
+        "link": "http://nkmr-lab.org/news/ec50_musicfont_nonaka.html",
+        "thumbnailFile": "ec50.jpg",
+        "location": "北海道/函館",
+        "date": "2018/12/22"
+    },
+    {
+        "title": "Music Video Clip Impression Emphasis Method by Font Fusion Synchronized with Music",
+        "description": "EC50にて発表した研究内容を発展させ，英語化したものです．",
+        "link": "http://nkmr-lab.org/news/icec2019_impression_mv_nonaka.html",
+        "thumbnailFile": "icec2019.jpg",
+        "location": "ペルー/アレキパ",
+        "date": "2019/11/12"
+    },
+    {
+        "title": "未知の音楽に誘導することを目的とした分岐型人力音楽推薦手法の提案",
+        "description": "オンライン開催だったので自宅からの発表でした",
+        "link": "http://nkmr-lab.org/news/hci188_recommen_nonaka.html",
+        "thumbnailFile": "hci188.jpg",
+        "location": "オンライン",
+        "date": "2020/06/01"
+    },
+    {
+        "title": "reco.mu: 分岐構造による音楽推薦促進システムの実装とその分析",
+        "description": "提案手法をWebシステムとして実装し，運用・分析を行なった結果について発表したものです．",
+        "link": "http://nkmr-lab.org/news/ec59_recomu_nonaka.html",
+        "thumbnailFile": "ec59.jpg",
+        "location": "オンライン",
+        "date": "2021/03/17"
+    }
+]

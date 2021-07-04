@@ -113,10 +113,10 @@ export default {
 
 <style lang="postcss" scoped>
   .header {
-    @apply flex items-center justify-between w-screen h-16 bg-blue-900;
+    @apply flex items-center justify-between w-full h-16 bg-blue-900;
   }
   .footer{
-    @apply w-screen h-32 relative bottom-0 bg-gray-700 text-white flex justify-center items-center;
+    @apply w-full h-32 relative bottom-0 bg-gray-700 text-white flex justify-center items-center;
   }
   .logo{
     @apply flex items-center justify-start text-white mt-0;

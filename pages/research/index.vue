@@ -8,20 +8,19 @@
         </h1>
       </div>
       <!-- cards -->
-      <div class="flex justify-center flex-wrap w-3/4 mx-auto" ref="cards">
+      <div class="flex justify-center flex-wrap w-full mx-auto" ref="cards">
           <!-- card -->
           <researchCard
-            v-for="reseach in research_arr"
-            :title=reseach.title
-            :description=reseach.description
-            :link=reseach.link
-            :thumbnail=reseach.thumbnail
+            v-for="research, index in research_arr"
+            :key="'research-'+index"
+            :research=research
             class="m-8"
           />
           <div
-            v-for="n in this.researches"
-            class="m-8"
-            style="width: 320px; height: 0px;"
+            v-for="n, index in this.researches"
+            :key="'blank-'+index"
+            class="mx-8"
+            style="width: 300px; height: 0px;"
           >
             <!-- empty -->
           </div>
@@ -32,6 +31,7 @@
 
 <script>
 import researchCard from '~/components/researchCard.vue'
+import resaerchJson from '~/assets/json/research.json'
 
 export default {
   components: {
@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       num: 0,
-      researches: []
+      researches: resaerchJson
     }
   },
   computed: {
@@ -55,11 +55,6 @@ export default {
   },
   mounted() {
     this.num = this.$refs.cards.childElementCount
-    this.$axios
-      .get('https://nonaka.nkmr.io/api/myweb/get_researches.php')
-      .then(response => {
-        this.researches = response.data
-      })
   }
 }
 </script>

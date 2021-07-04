@@ -1,0 +1,23 @@
+{
+    "educationalBackground": "明治大学先端数理科学研究科先端メディアサイエンス専攻在学中",
+    "skill": {
+        "language": {
+            "title": "言語",
+            "content": "HTML, CSS, JavaScript, Go, PHP, Ruby, Processing"
+        },
+        "framework": {
+            "title": "ライブラリ/フレームワーク",
+            "content": "Vue.js, Nuxt.js, React, Gin"
+        },
+        "other": {
+            "title": "その他",
+            "content": "Docker, Firebase, Git, SQL, mongoDB"
+        }
+    },
+    "music": {
+        "title": "音楽",
+        "genres": "jazz, shoegaze, house, electronica, drum'n'bass",
+        "AppleMusic": "https://music.apple.com/profile/nnnk7777"
+    },
+    "like": "音楽, 筋トレ, 犬, ゲーム ,映画, 旅行, 掃除"
+}
