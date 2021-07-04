@@ -18,7 +18,7 @@
 
             <div class="flex justify-center mx-auto rounded overflow-hidden shadow-lg">
                 <img
-                  src="../../assets/profileimage.jpg"
+                  src="../../assets/images/profileimage.jpg"
                   alt="profile image"
                   class="w-auto h-64 object-cover"
                 />

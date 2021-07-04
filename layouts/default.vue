@@ -2,20 +2,17 @@
   <div class="" @click="checkTag">
     <!-- header -->
     <header
-      class="w-screen h-16 relative
-             flex items-center justify-between
-             bg-blue-900
-             pl-8 sm:px-32"
+      class="header px-8 sm:px-32"
     >
       <!-- logo -->
-      <div class="flex items-center justify-start text-white mt-0">
+      <div class="logo">
         <nuxt-link to="/">
-          <span class="text-white text-5xl decofont">nnk</span>
+          <span class="decofont text-5xl">nnk</span>
         </nuxt-link>
       </div>
 
       <!-- humberger -->
-      <div class="sm:hidden relative w-48 mt-1 z-20">
+      <div class="sm:hidden humbergerBuns">
         <div class="flex justify-end">
           <button
             id="burger"
@@ -36,7 +33,7 @@
 
       <!-- simple list -->
       <div
-        class="hidden text-white sm:flex sm:items-center sm:w-auto sm:justify-end decofont text-xl"
+        class="hidden sm:flex sm:items-center sm:w-auto sm:justify-end decofont text-xl"
       >
         <nuxt-link to="/about" class="mr-10 md:inline-block">
           About
@@ -54,30 +51,26 @@
 
     <!-- footer -->
     <footer
-      class="block w-screen h-32 relative bottom-0 bg-gray-700 text-white flex justify-center items-center"
+      class="footer"
     >
       <div class="flex flex-col">
         <!-- sns icons -->
         <div class="flex justify-center">
           <div class="w-32 flex justify-around text-2xl">
-            <a href="https://twitter.com/nnnk7777" target="_blank" name="twitter" rel="noopener">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://github.com/nnnk7777" target="_blank" name="github" rel="noopener">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/nnnk7777/" target="_blank" name="instagram" rel="noopener">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/nnnk7777" target="_blank" name="facebook" rel="noopener">
-              <i class="fab fa-facebook-square"></i>
+            <a
+              v-for="contact,index in this.contacts" :key="index"
+              :href="String(contact.url) + String(contact.name)"
+              target="_blank"
+               rel="noopener"
+            >
+              <i class="fab" :class="'fa-'+contact.name"></i>
             </a>
           </div>
         </div>
 
         <!-- copyright -->
-        <div class="flex justify-center text-xs mt-2">
-          <p>© 2020 Kosuke Nonaka</p>
+        <div class="copyright">
+          <p>© {{ this.currentYear }} Kosuke Nonaka</p>
         </div>
       </div>
     </footer>
@@ -86,6 +79,7 @@
 
 <script>
 import burgerMenu from '~/components/burgerMenu'
+import contactsJson from '~/assets/json/contacts.json'
 
 export default {
   components: {
@@ -93,7 +87,9 @@ export default {
   },
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      currentYear: null,
+      contacts: contactsJson
     }
   },
   methods: {
@@ -107,12 +103,32 @@ export default {
         this.isOpen = false
       }
     }
+  },
+  mounted(){
+    const y = new Date()
+    this.currentYear = y.getFullYear()
   }
 }
 </script>
 
-<style>
+<style lang="postcss" scoped>
+  .header {
+    @apply flex items-center justify-between w-screen h-16 bg-blue-900;
+  }
+  .footer{
+    @apply w-screen h-32 relative bottom-0 bg-gray-700 text-white flex justify-center items-center;
+  }
+  .logo{
+    @apply flex items-center justify-start text-white mt-0;
+  }
   .decofont {
+    @apply text-white;
     font-family: 'Jockey One', sans-serif;
+  }
+  .copyright {
+    @apply flex justify-center text-xs mt-2;
+  }
+  .hambergerBuns {
+    @apply  relative w-48 mt-1 z-20;
   }
 </style>

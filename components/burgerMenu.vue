@@ -1,6 +1,7 @@
 <template>
   <transition name="right">
-    <div v-show="active" class="absolute bg-gray-600 opacity-90 w-48 z-10 text-white text-lg overflow-x-hidden">
+    <div v-show="active" class="absolute bg-gray-600 opacity-90 w-48 z-10 text-white text-lg overflow-x-hidden"
+    style="right: 0px">
       <ul @click="$emit('selected')">
         <nuxt-link to="/about">
           <li class="burgerPatty">
@@ -44,7 +45,7 @@ export default {
 
   .right-enter,
   .right-leave-to {
-    transform: translateX(16rem) translateX(0px);
+    transform: translateX(12rem) translateX(0px);
   }
 
   .burgerPatty {
