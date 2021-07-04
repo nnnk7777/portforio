@@ -1,25 +1,24 @@
 <template>
-  <div class="flex justify-center">
-    <div class="mt-0">
+  <div class="base">
       <img
-        src="../assets/header.jpg"
+        src="../assets/images/header.jpg"
         alt="header image"
-        class="h-56 md:h-64 w-screen object-cover object-right md:object-center"
+        class="headerImage h-56 md:h-64 object-right md:object-center"
       >
 
-      <div class="my-20 md:mt-32 flex justify-center flex-col mx-10 sm:mx-auto sm:w-2/3">
-        <h1 class="text-4xl font-thin">
+      <div class="contentWrapper md:mt-32 sm:w-2/3">
+        <h1 class="subtitle">
           About this site
         </h1>
-        <div class="flex justify-center">
-          <div class="antialiased flex flex-col text-base font-thin mt-3 leading-8">
+        <div class="flex justify-center mx-auto">
+          <div class="text">
             <p>こちらは研究や趣味について共有するポートフォリオサイトです。</p>
             <p>趣味やスキルについては
-              <nuxt-link to="/about" class="underline text-blue-700 font-medium">
+              <nuxt-link to="/about" class="link">
                 About
               </nuxt-link>
             を、研究の業績や内容については
-              <nuxt-link to="/research" class="underline text-blue-700 font-medium">
+              <nuxt-link to="/research" class="link">
                 Research
               </nuxt-link>
             をご覧ください。</p>
@@ -28,7 +27,6 @@
         </div>
       </div>
 
-    </div>
   </div>
 </template>
 
@@ -45,3 +43,28 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+  .base {
+    @apply flex items-center flex-col;
+  }
+  .headerImage {
+    @apply w-screen object-cover;
+  }
+
+  .contentWrapper{
+    @apply flex justify-center flex-col my-20 mx-10;
+  }
+
+  .subtitle {
+    @apply text-4xl font-thin;
+  }
+
+  .text{
+    @apply antialiased flex flex-col text-base font-thin mt-3 leading-8;
+  }
+
+  .link {
+    @apply underline text-blue-700 font-medium;
+  }
+</style>
