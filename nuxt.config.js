@@ -1,8 +1,5 @@
 export default {
   mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
     titleTemplate: `%s - Kosuke Nonaka `,
     htmlAttrs: {
@@ -25,55 +22,28 @@ export default {
       }
     ]
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
   css: ['~/assets/css/common.css'],
   postcss: {
     plugins: {
       tailwindcss: './tailwind.config.js'
     }
   },
-  /*
-   ** Plugins to load before mounting the App
-   */
   plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
   devModules: [
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss'
   ],
-  /*
-   ** Nuxt.js modules
-   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'nuxt-webfontloader'
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
   axios: {},
   webfontloader: {
     google: {
       families: ['Jockey+One', 'Ubuntu']
     }
   },
-  /*
-   ** Build configuration
-   */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     extend(config, ctx) {}
   }
 }
