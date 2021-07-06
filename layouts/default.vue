@@ -1,9 +1,7 @@
 <template>
   <div class="" @click="checkTag">
     <!-- header -->
-    <header
-      class="header px-8 sm:px-32"
-    >
+    <header class="header px-8 sm:px-32">
       <!-- logo -->
       <div class="logo">
         <nuxt-link to="/">
@@ -28,7 +26,11 @@
             </span>
           </button>
         </div>
-        <burgerMenu @selected="isOpen = false" :active="isOpen" class="decofont" />
+        <burgerMenu
+          @selected="isOpen = false"
+          :active="isOpen"
+          class="decofont"
+        />
       </div>
 
       <!-- simple list -->
@@ -50,20 +52,19 @@
     </div>
 
     <!-- footer -->
-    <footer
-      class="footer"
-    >
+    <footer class="footer">
       <div class="flex flex-col">
         <!-- sns icons -->
         <div class="flex justify-center">
           <div class="w-32 flex justify-around text-2xl">
             <a
-              v-for="contact,index in this.contacts" :key="index"
-              :href="String(contact.url) + String(contact.name)"
+              v-for="(contact, index) in this.contacts"
+              :key="index"
+              :href="String(contact.url) + 'nnnk7777'"
               target="_blank"
-               rel="noopener"
+              rel="noopener"
             >
-              <i class="fab" :class="'fa-'+contact.name"></i>
+              <i class="fab" :class="'fa-' + contact.name"></i>
             </a>
           </div>
         </div>
@@ -104,7 +105,7 @@ export default {
       }
     }
   },
-  mounted(){
+  mounted() {
     const y = new Date()
     this.currentYear = y.getFullYear()
   }
@@ -112,23 +113,23 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-  .header {
-    @apply flex items-center justify-between w-full h-16 bg-blue-900;
-  }
-  .footer{
-    @apply w-full h-32 relative bottom-0 bg-gray-700 text-white flex justify-center items-center;
-  }
-  .logo{
-    @apply flex items-center justify-start text-white mt-0;
-  }
-  .decofont {
-    @apply text-white;
-    font-family: 'Jockey One', sans-serif;
-  }
-  .copyright {
-    @apply flex justify-center text-xs mt-2;
-  }
-  .hambergerBuns {
-    @apply  relative w-48 mt-1 z-20;
-  }
+.header {
+  @apply flex items-center justify-between w-full h-16 bg-blue-900;
+}
+.footer {
+  @apply w-full h-32 relative bottom-0 bg-gray-700 text-white flex justify-center items-center;
+}
+.logo {
+  @apply flex items-center justify-start text-white mt-0;
+}
+.decofont {
+  @apply text-white;
+  font-family: 'Jockey One', sans-serif;
+}
+.copyright {
+  @apply flex justify-center text-xs mt-2;
+}
+.hambergerBuns {
+  @apply relative w-48 mt-1 z-20;
+}
 </style>
